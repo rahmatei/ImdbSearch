@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Features.Home.HomeImdb" android:orientation="vertical">
+    <RelativeLayout android:layout_width="match_parent" android:id="@+id/searchBox"
+                    android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_margin="10dp"
+                      android:layout_height="wrap_content" android:background="@drawable/form" android:gravity="center"
+                      android:padding="15dp">
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_gravity="center" android:gravity="center" android:layout_height="80dp">
+                <Button android:id="@+id/btnSearchImdb" android:background="@drawable/positive_button"
+                        android:textColor="@color/textButton" android:layout_width="0dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content" android:text="@string/SearchButtonIMDB"
+                        android:layout_weight="0.3"/>
+                <EditText android:layout_margin="0dp" android:background="@drawable/edittext"
+                          android:textAlignment="center"
+                          android:textDirection="rtl" android:padding="0dp"
+                          android:imeOptions="actionSearch"
+                          android:lines="1"
+                          android:importantForAutofill="no"
+                          android:inputType="textPersonName"
+                          android:layout_marginRight="30dp"
+                          android:id="@+id/edtSearchIMDB" android:layout_width="0dp" android:layout_height="50dp"
+                          android:hint="@string/SearchIMDB" android:layout_weight="0.7"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ProgressBar android:layout_width="30dp"
+                     android:layout_marginTop="40dp"
+                     android:layout_marginStart="25dp"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/progressBar"
+                     android:visibility="gone"
+                     android:theme="@style/Widget.AppCompat.ProgressBar"/>
+    </RelativeLayout>
+    <!--<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:layout_margin="15dp"
+                                           app:cardBackgroundColor="#fff"
+                                           app:cardCornerRadius="10dp"
+                                           app:cardElevation="7dp"
+                                           app:contentPadding="10dp"
+        >
+            <LinearLayout android:layout_width="match_parent" android:layout_gravity="center"
+                          android:orientation="vertical"
+                          android:layout_height="match_parent">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="200dp">
+                    <ImageView android:layout_width="wrap_content" android:id="@+id/imgImdb"
+                               android:layout_height="wrap_content" android:scaleType="fitXY"
+                               android:src="@drawable/woddy"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textColor="@color/textButton" android:textStyle="bold"
+                              android:text="Toy Story 4" android:textSize="30dp"
+                              android:layout_marginLeft="10dp"
+                              android:layout_alignParentBottom="true" android:layout_alignStart="@+id/imgImdb"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="false"
+                        android:layout_gravity="right"
+                        app:fabSize="normal"
+                        android:id="@+id/btnLike"
+                        app:backgroundTint="@color/fabBtn"
+                        android:layout_marginTop="-30dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/like"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAlignment="center"
+                          android:textAppearance="@style/TextAppearance.AppCompat.Small" android:textDirection="ltr"
+                          android:maxLines="4"
+                          android:text="Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy"/>
+                <TextView android:layout_width="match_parent" android:layout_height="5dp"
+                          android:background="@drawable/line"
+                          android:id="@+id/txtline"
+                          android:layout_margin="5dp"
+                />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtlblRelease"
+                              android:text="ReleaseDate: " android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtRelease"
+                              android:text="2019-06-19"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtlblRate"
+                              android:layout_marginLeft="75dp" android:text="Vote Average: " android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/txtRate"
+                              android:text="7.6"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>-->
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/VideoSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="video-cam.json"
+            app:lottie_loop="true"/>
+
+</LinearLayout>

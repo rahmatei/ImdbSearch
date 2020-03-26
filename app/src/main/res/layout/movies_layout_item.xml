@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:layout_margin="15dp"
+                                       app:cardBackgroundColor="#fff"
+                                       app:cardCornerRadius="10dp"
+                                       app:cardElevation="7dp"
+                                       app:contentPadding="10dp"
+    >
+        <LinearLayout android:layout_width="match_parent" android:layout_gravity="center"
+                      android:orientation="vertical"
+                      android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="200dp">
+                <ImageView android:layout_width="match_parent" android:id="@+id/imgImdb"
+                           android:layout_height="200dp" android:scaleType="fitXY"
+                           android:src="@drawable/woddy"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textColor="@color/textButton" android:textStyle="bold"
+                          android:text="Toy Story 4" android:textSize="30dp"
+                          android:layout_marginLeft="10dp"
+                          android:id="@+id/txtTitle"
+                          android:layout_alignParentBottom="true" android:layout_alignStart="@+id/imgImdb"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="false"
+                    android:layout_gravity="right"
+                    app:fabSize="normal"
+                    android:id="@+id/btnLike"
+                    app:backgroundTint="@color/fabBtn"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/like"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:textAlignment="center"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Small" android:textDirection="ltr"
+                      android:maxLines="4"
+                      android:id="@+id/txtDesc"
+                      android:text="Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy"/>
+            <TextView android:layout_width="match_parent" android:layout_height="5dp"
+                      android:background="@drawable/line"
+                      android:id="@+id/txtline"
+                      android:layout_margin="5dp"
+            />
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/txtlblRelease"
+                          android:text="ReleaseDate: " android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/txtRelease"
+                          android:text="2019-06-19"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/txtlblRate"
+                          android:layout_marginLeft="75dp" android:text="Vote Average: " android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/txtRate"
+                          android:text="7.6"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

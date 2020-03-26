@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IMDB</string>
+    <string name="SearchIMDB">لطفا نام فیلم را وارد نمایید</string>
+    <string name="SearchButtonIMDB">جستجو</string>
+    <string name="ProfileName">Hossein Rahmati</string>
+    <string name="ProfileEmail">Rahmatei@gmail.com</string>
+    <string name="item_menu_like">فیلم های مورد علاقه</string>
+    <string name="item_menu_about">درباره ما</string>
+    <string name="action_menuright">منو</string>
+    <string name="item_menu_user">اطلاعات کاربری</string>
+</resources>
